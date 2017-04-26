@@ -122,7 +122,13 @@ namespace IBM.Interview.ProjectA
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int Finder = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Splash = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int Trainer = 2130903042;
 			
 			static Layout()
 			{
