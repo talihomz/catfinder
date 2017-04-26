@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:padding="25dp">
     <TextView
-        android:text="Recyclable Plastic Detector "
+        android:text="Recyclable Item Finder "
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1"

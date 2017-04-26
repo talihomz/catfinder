@@ -3,5 +3,43 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp">
+    <ImageView
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sampleImage"
+        android:minHeight="400dp" />
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/buttonLayout"
+        android:layout_marginTop="40dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/picFromCamera"
+            android:text="camera"
+            android:drawableTop="@android:drawable/ic_menu_camera" />
+        <Button
+            android:text="Gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/picFromGallery"
+            android:layout_toRightOf="@id/picFromCamera"
+            android:drawableTop="@android:drawable/ic_menu_gallery" />
+        <Button
+            android:text="Check"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/check"
+            android:layout_gravity="right"
+            android:layout_alignParentRight="true"
+            android:drawableTop="@android:drawable/checkbox_on_background" />
+    </RelativeLayout>
 </LinearLayout>
