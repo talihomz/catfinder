@@ -4,7 +4,7 @@ using Android.OS;
 
 namespace IBM.Interview.ProjectA
 {
-    [Activity(Label = "IBM.Interview.ProjectA", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "IBM Interview ProjectA Solution", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
