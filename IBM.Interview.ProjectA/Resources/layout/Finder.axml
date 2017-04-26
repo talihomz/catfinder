@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,11 +22,12 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="20dp">
-        <ImageView
+        <MvxImageView
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/sampleImage"
+            local:MvxBind="Bitmap Bytes,Converter=InMemoryImage"
             android:minHeight="400dp" />
         <RelativeLayout
             android:orientation="horizontal"
@@ -36,6 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/picFromCamera"
+                local:MvxBind="Click TakePictureCommand;"
                 android:text="camera"
                 android:drawableTop="@android:drawable/ic_menu_camera" />
             <Button
@@ -43,6 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/picFromGallery"
+                local:MvxBind="Click OpenGalleryCommand;"
                 android:layout_toRightOf="@id/picFromCamera"
                 android:drawableTop="@android:drawable/ic_menu_gallery" />
             <Button
