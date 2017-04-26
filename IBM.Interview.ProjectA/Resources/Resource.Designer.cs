@@ -108,29 +108,32 @@ namespace IBM.Interview.ProjectA
 			// aapt resource value: 0x7f040001
 			public const int MvxBindingTagUnique = 2130968577;
 			
-			// aapt resource value: 0x7f040003
-			public const int buttonLayout = 2130968579;
-			
-			// aapt resource value: 0x7f040006
-			public const int check = 2130968582;
-			
 			// aapt resource value: 0x7f040004
-			public const int picFromCamera = 2130968580;
-			
-			// aapt resource value: 0x7f040005
-			public const int picFromGallery = 2130968581;
-			
-			// aapt resource value: 0x7f040002
-			public const int sampleImage = 2130968578;
+			public const int buttonLayout = 2130968580;
 			
 			// aapt resource value: 0x7f040007
-			public const int textView1 = 2130968583;
+			public const int check = 2130968583;
+			
+			// aapt resource value: 0x7f040002
+			public const int finderToolbar = 2130968578;
+			
+			// aapt resource value: 0x7f040005
+			public const int picFromCamera = 2130968581;
+			
+			// aapt resource value: 0x7f040006
+			public const int picFromGallery = 2130968582;
+			
+			// aapt resource value: 0x7f040003
+			public const int sampleImage = 2130968579;
 			
 			// aapt resource value: 0x7f040008
-			public const int textView2 = 2130968584;
+			public const int textView1 = 2130968584;
 			
 			// aapt resource value: 0x7f040009
-			public const int textView3 = 2130968585;
+			public const int textView2 = 2130968585;
+			
+			// aapt resource value: 0x7f04000a
+			public const int textView3 = 2130968586;
 			
 			static Id()
 			{
@@ -176,6 +179,22 @@ namespace IBM.Interview.ProjectA
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f060000
+			public const int App = 2131099648;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}
