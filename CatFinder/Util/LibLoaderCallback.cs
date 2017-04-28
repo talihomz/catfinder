@@ -77,6 +77,9 @@ namespace CatFinder.Util
                     Log.Info(LoggerMessage, "Loaded cascade classifier from " + _activity.CascadeFile.AbsolutePath);
 
                 cascadeDir.Delete();
+
+                // update that a detector was loaded
+                _activity.ViewModel.DetectorStatus = "Looking for cats <O.O>";
             }
             catch (IOException e)
             {

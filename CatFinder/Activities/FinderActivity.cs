@@ -9,6 +9,7 @@ using CatFinder.Util;
 using Java.IO;
 using Java.Lang;
 using MvvmCross.Droid.Views;
+using MvvmCross.Platform;
 using OpenCV.Android;
 using OpenCV.Core;
 using OpenCV.ImgProc;
@@ -33,7 +34,15 @@ namespace CatFinder.Activities
         public File CascadeFile { get; set; }
         public CascadeClassifier Detector { get; set; }
         public CameraBridgeViewBase OpenCvCamera => _openCvCamera;
-         
+
+        protected override void OnViewModelSet()
+        {
+            base.OnViewModelSet();
+
+            if (ViewModel == null)
+                ViewModel = Mvx.IocConstruct<FinderViewModel>();
+        }
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
