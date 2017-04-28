@@ -52,26 +52,32 @@ namespace IBM.Interview.ProjectA
 		public partial class Attribute
 		{
 			
-			// aapt resource value: 0x7f010000
-			public const int MvxBind = 2130771968;
-			
-			// aapt resource value: 0x7f010004
-			public const int MvxDropDownItemTemplate = 2130771972;
-			
-			// aapt resource value: 0x7f010005
-			public const int MvxGroupItemTemplate = 2130771973;
-			
-			// aapt resource value: 0x7f010003
-			public const int MvxItemTemplate = 2130771971;
-			
-			// aapt resource value: 0x7f010001
-			public const int MvxLang = 2130771969;
+			// aapt resource value: 0x7f010002
+			public const int MvxBind = 2130771970;
 			
 			// aapt resource value: 0x7f010006
-			public const int MvxSource = 2130771974;
+			public const int MvxDropDownItemTemplate = 2130771974;
 			
-			// aapt resource value: 0x7f010002
-			public const int MvxTemplate = 2130771970;
+			// aapt resource value: 0x7f010007
+			public const int MvxGroupItemTemplate = 2130771975;
+			
+			// aapt resource value: 0x7f010005
+			public const int MvxItemTemplate = 2130771973;
+			
+			// aapt resource value: 0x7f010003
+			public const int MvxLang = 2130771971;
+			
+			// aapt resource value: 0x7f010008
+			public const int MvxSource = 2130771976;
+			
+			// aapt resource value: 0x7f010004
+			public const int MvxTemplate = 2130771972;
+			
+			// aapt resource value: 0x7f010001
+			public const int camera_id = 2130771969;
+			
+			// aapt resource value: 0x7f010000
+			public const int show_fps = 2130771968;
 			
 			static Attribute()
 			{
@@ -108,32 +114,41 @@ namespace IBM.Interview.ProjectA
 			// aapt resource value: 0x7f040001
 			public const int MvxBindingTagUnique = 2130968577;
 			
-			// aapt resource value: 0x7f040004
-			public const int buttonLayout = 2130968580;
-			
-			// aapt resource value: 0x7f040007
-			public const int check = 2130968583;
-			
 			// aapt resource value: 0x7f040002
-			public const int finderToolbar = 2130968578;
-			
-			// aapt resource value: 0x7f040005
-			public const int picFromCamera = 2130968581;
-			
-			// aapt resource value: 0x7f040006
-			public const int picFromGallery = 2130968582;
+			public const int any = 2130968578;
 			
 			// aapt resource value: 0x7f040003
-			public const int sampleImage = 2130968579;
+			public const int back = 2130968579;
 			
-			// aapt resource value: 0x7f040008
-			public const int textView1 = 2130968584;
+			// aapt resource value: 0x7f040007
+			public const int buttonLayout = 2130968583;
 			
-			// aapt resource value: 0x7f040009
-			public const int textView2 = 2130968585;
+			// aapt resource value: 0x7f040006
+			public const int cameraSurfaceView = 2130968582;
 			
 			// aapt resource value: 0x7f04000a
-			public const int textView3 = 2130968586;
+			public const int check = 2130968586;
+			
+			// aapt resource value: 0x7f040005
+			public const int finderToolbar = 2130968581;
+			
+			// aapt resource value: 0x7f040004
+			public const int front = 2130968580;
+			
+			// aapt resource value: 0x7f040008
+			public const int picFromCamera = 2130968584;
+			
+			// aapt resource value: 0x7f040009
+			public const int picFromGallery = 2130968585;
+			
+			// aapt resource value: 0x7f04000b
+			public const int textView1 = 2130968587;
+			
+			// aapt resource value: 0x7f04000c
+			public const int textView2 = 2130968588;
+			
+			// aapt resource value: 0x7f04000d
+			public const int textView3 = 2130968589;
 			
 			static Id()
 			{
@@ -202,9 +217,19 @@ namespace IBM.Interview.ProjectA
 		public partial class Styleable
 		{
 			
-			public static int[] MvxBinding = new int[] {
+			public static int[] CameraBridgeViewBase = new int[] {
 					2130771968,
 					2130771969};
+			
+			// aapt resource value: 1
+			public const int CameraBridgeViewBase_camera_id = 1;
+			
+			// aapt resource value: 0
+			public const int CameraBridgeViewBase_show_fps = 0;
+			
+			public static int[] MvxBinding = new int[] {
+					2130771970,
+					2130771971};
 			
 			// aapt resource value: 0
 			public const int MvxBinding_MvxBind = 0;
@@ -213,26 +238,26 @@ namespace IBM.Interview.ProjectA
 			public const int MvxBinding_MvxLang = 1;
 			
 			public static int[] MvxControl = new int[] {
-					2130771970};
+					2130771972};
 			
 			// aapt resource value: 0
 			public const int MvxControl_MvxTemplate = 0;
 			
 			public static int[] MvxExpandableListView = new int[] {
-					2130771973};
+					2130771975};
 			
 			// aapt resource value: 0
 			public const int MvxExpandableListView_MvxGroupItemTemplate = 0;
 			
 			public static int[] MvxImageView = new int[] {
-					2130771974};
+					2130771976};
 			
 			// aapt resource value: 0
 			public const int MvxImageView_MvxSource = 0;
 			
 			public static int[] MvxListView = new int[] {
-					2130771971,
-					2130771972};
+					2130771973,
+					2130771974};
 			
 			// aapt resource value: 1
 			public const int MvxListView_MvxDropDownItemTemplate = 1;
