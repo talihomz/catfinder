@@ -3,6 +3,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Util;
 using Android.Views;
+using Android.Widget;
 using Catfinder.Core.ViewModels;
 using CatFinder.Util;
 using Java.IO;
@@ -18,7 +19,7 @@ namespace CatFinder.Activities
     [Activity(Label = "Cat Finder", Theme = "@style/App",
         ScreenOrientation = ScreenOrientation.Landscape,
         ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.KeyboardHidden)]
-    public class FinderActivity : MvxActivity<FinderViewModel>, CameraBridgeViewBase.ICvCameraViewListener2
+    public class FinderActivity : MvxActivity<FinderViewModel>, CameraBridgeViewBase.ICvCameraViewListener2, SeekBar.IOnSeekBarChangeListener
     {
         private CameraBridgeViewBase _openCvCamera;
         private LibLoaderCallback _loaderCallback;
@@ -26,6 +27,7 @@ namespace CatFinder.Activities
         private static readonly Scalar FaceRectColor = new Scalar(0, 255, 0, 255);
         private float _mRelativeFaceSize = 0.2f;
         private int _mAbsoluteFaceSize = 0;
+        private SeekBar _seekBar;
         private const string ActivityLogger = "FinderActivity";
 
         public File CascadeFile { get; set; }
@@ -44,7 +46,21 @@ namespace CatFinder.Activities
 
             // configure camera
             ConfigureCamera();
+
+            // configure the seekbar
+            ConfigureSeekbar();
         }
+
+        private void ConfigureSeekbar()
+        {
+            _seekBar = FindViewById<SeekBar>(Resource.Id.minimumFaceSize);
+        }
+        private void SetMinFaceSize(float faceSize)
+        {
+            _mRelativeFaceSize = faceSize;
+            _mAbsoluteFaceSize = 0;
+        }
+
 
         protected override void OnResume()
         {
@@ -124,6 +140,24 @@ namespace CatFinder.Activities
                 Imgproc.Rectangle(_mRgba, t.Tl(), t.Br(), FaceRectColor, 3);
 
             return _mRgba;
+        }
+
+        public void OnProgressChanged(SeekBar seekBar, int progress, bool fromUser)
+        {
+            if (fromUser)
+            {
+                SetMinFaceSize( 0.1f * progress);
+            }
+        }
+
+        public void OnStartTrackingTouch(SeekBar seekBar)
+        {
+            System.Diagnostics.Debug.WriteLine("Tracking changes.");
+        }
+
+        public void OnStopTrackingTouch(SeekBar seekBar)
+        {
+            System.Diagnostics.Debug.WriteLine("Stopped tracking changes.");
         }
     }
 }
