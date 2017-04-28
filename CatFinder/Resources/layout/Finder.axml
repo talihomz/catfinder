@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <org.opencv.android.JavaCameraView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cameraSurfaceView" />
+    <LinearLayout
+        android:alpha="0.9"
+        android:background="@android:color/holo_green_light"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp">
+        <TextView
+            android:text="Accuracy %"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+        <SeekBar
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:id="@+id/minimumFaceSize"
+            android:max="4"
+            android:layout_marginLeft="15dp" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            local:MvxBind="Text 'Status : ' + DetectorStatus"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+</RelativeLayout>
