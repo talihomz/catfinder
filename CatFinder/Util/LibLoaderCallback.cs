@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+﻿using System.Threading;
 using Android.Content;
 using Android.Util;
 using CatFinder.Activities;
@@ -26,10 +26,11 @@ namespace CatFinder.Util
                     {
                         Log.Info(LoggerMessage, "OpenCV loaded successfully");
 
-                        ConfigureDetector().ConfigureAwait(false);
+                        // start file loading in separate thread
+                        ThreadPool.QueueUserWorkItem(o => ConfigureDetector());
 
                         // ConfigureCamera
-                        ConfiureCamera();
+                        ConfigureCamera();
                     }
                     break;
                 default:
@@ -40,15 +41,13 @@ namespace CatFinder.Util
             }
         }
 
-        private void ConfiureCamera()
+        private void ConfigureCamera()
         {
             _activity.OpenCvCamera.EnableView();
         }
 
-        private Task<bool> ConfigureDetector()
+        private void ConfigureDetector()
         {
-            var tcs = new TaskCompletionSource<bool>();
-            
             try
             {
                 File cascadeDir;
@@ -78,18 +77,12 @@ namespace CatFinder.Util
                     Log.Info(LoggerMessage, "Loaded cascade classifier from " + _activity.CascadeFile.AbsolutePath);
 
                 cascadeDir.Delete();
-
-                tcs.SetResult(true);
             }
             catch (IOException e)
             {
                 e.PrintStackTrace();
                 Log.Error(LoggerMessage, "Failed to load cascade. Exception thrown: " + e);
-                tcs.SetException(e);
             }
-
-
-            return tcs.Task;
         }
 
     }

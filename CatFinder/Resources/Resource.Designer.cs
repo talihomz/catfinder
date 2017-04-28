@@ -127,13 +127,13 @@ namespace CatFinder
 			public const int front = 2131034116;
 			
 			// aapt resource value: 0x7f050006
-			public const int textView1 = 2131034118;
+			public const int minimumFaceSize = 2131034118;
 			
 			// aapt resource value: 0x7f050007
-			public const int textView2 = 2131034119;
+			public const int textView1 = 2131034119;
 			
 			// aapt resource value: 0x7f050008
-			public const int textView3 = 2131034120;
+			public const int textView2 = 2131034120;
 			
 			static Id()
 			{

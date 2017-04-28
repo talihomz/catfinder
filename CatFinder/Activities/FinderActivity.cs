@@ -54,6 +54,7 @@ namespace CatFinder.Activities
         private void ConfigureSeekbar()
         {
             _seekBar = FindViewById<SeekBar>(Resource.Id.minimumFaceSize);
+            _seekBar.SetOnSeekBarChangeListener(this);
         }
         private void SetMinFaceSize(float faceSize)
         {
@@ -144,20 +145,23 @@ namespace CatFinder.Activities
 
         public void OnProgressChanged(SeekBar seekBar, int progress, bool fromUser)
         {
-            if (fromUser)
-            {
-                SetMinFaceSize( 0.1f * progress);
-            }
+            if (!fromUser) return;
+
+            var reversedValue = 4 - progress;
+
+            // adjust reversed value
+            reversedValue++;
+            SetMinFaceSize( 0.1f * reversedValue);
         }
 
         public void OnStartTrackingTouch(SeekBar seekBar)
         {
-            System.Diagnostics.Debug.WriteLine("Tracking changes.");
+            // not implemented
         }
 
         public void OnStopTrackingTouch(SeekBar seekBar)
         {
-            System.Diagnostics.Debug.WriteLine("Stopped tracking changes.");
+            // not implemented
         }
     }
 }
