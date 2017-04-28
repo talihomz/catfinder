@@ -2,7 +2,7 @@
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Plugins.PictureChooser;
 
-namespace IBM.Interview.ProjectA.Core.ViewModels
+namespace Catfinder.Core.ViewModels
 {
     public class FinderViewModel : MvxViewModel
     {

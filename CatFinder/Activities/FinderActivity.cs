@@ -2,16 +2,15 @@
 using Android.OS;
 using Android.Util;
 using Android.Views;
-using IBM.Interview.ProjectA.Core.ViewModels;
-using IBM.Interview.ProjectA.Util;
+using Catfinder.Core.ViewModels;
+using CatFinder.Util;
 using Java.IO;
 using MvvmCross.Droid.Views;
 using OpenCV.Android;
 using OpenCV.Core;
-using OpenCV.ImgProc;
 using OpenCV.ObjDetect;
 
-namespace IBM.Interview.ProjectA.Activities
+namespace CatFinder.Activities
 {
     [Activity(Label = "Finder", Theme = "@style/App")]
     public class FinderActivity : MvxActivity<FinderViewModel>, CameraBridgeViewBase.ICvCameraViewListener2

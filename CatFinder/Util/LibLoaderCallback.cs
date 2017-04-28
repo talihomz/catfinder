@@ -1,11 +1,11 @@
 ﻿using Android.Content;
 using Android.Util;
-using IBM.Interview.ProjectA.Activities;
+using CatFinder.Activities;
 using Java.IO;
 using OpenCV.Android;
 using OpenCV.ObjDetect;
 
-namespace IBM.Interview.ProjectA.Util
+namespace CatFinder.Util
 {
     public class LibLoaderCallback : BaseLoaderCallback
     {

@@ -8,8 +8,8 @@
     <ProjectGuid>{5A1A0417-7849-45F3-A8E3-31179B1D5E90}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IBM.Interview.ProjectA.Core</RootNamespace>
-    <AssemblyName>IBM.Interview.ProjectA.Core</AssemblyName>
+    <RootNamespace>Catfinder.Core</RootNamespace>
+    <AssemblyName>Catfinder.Core</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

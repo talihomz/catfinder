@@ -9,8 +9,8 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IBM.Interview.ProjectA</RootNamespace>
-    <AssemblyName>IBM.Interview.ProjectA</AssemblyName>
+    <RootNamespace>CatFinder</RootNamespace>
+    <AssemblyName>CatFinder</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
@@ -46,8 +46,8 @@
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="IBM.Interview.ProjectA.Core">
-      <HintPath>..\packages\IBM.Interview.ProjectA.Core.dll</HintPath>
+    <Reference Include="Catfinder.Core">
+      <HintPath>..\packages\Catfinder.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Mono.Android" />

@@ -1,8 +1,8 @@
-﻿using IBM.Interview.ProjectA.Core.ViewModels;
+﻿using Catfinder.Core.ViewModels;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.IoC;
 
-namespace IBM.Interview.ProjectA.Core
+namespace Catfinder.Core
 {
     public class App : MvxApplication
     {
