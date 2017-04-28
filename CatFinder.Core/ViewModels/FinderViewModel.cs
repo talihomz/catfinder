@@ -1,6 +1,4 @@
-﻿using System.IO;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Plugins.PictureChooser;
+﻿using MvvmCross.Core.ViewModels;
 
 namespace Catfinder.Core.ViewModels
 {
