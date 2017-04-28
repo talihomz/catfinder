@@ -1,9 +1,9 @@
 ﻿using Android.Content;
-using IBM.Interview.ProjectA.Core;
+using Catfinder.Core;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Platform;
 
-namespace IBM.Interview.ProjectA
+namespace CatFinder
 {
 
     public class Setup : MvxAndroidSetup

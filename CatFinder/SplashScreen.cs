@@ -2,7 +2,7 @@
 using Android.Content.PM;
 using MvvmCross.Droid.Views;
 
-namespace IBM.Interview.ProjectA
+namespace CatFinder
 {
     [Activity(
         Label = "Recyclable Finder"
