@@ -23,8 +23,7 @@
       android:paddingTop="20dp">
     <org.opencv.android.JavaCameraView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="400dp" 
+        android:layout_height="400dp"
         android:id="@+id/cameraSurfaceView" />
     <RelativeLayout
         android:orientation="horizontal"

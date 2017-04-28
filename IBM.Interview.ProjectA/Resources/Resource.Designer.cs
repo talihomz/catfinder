@@ -108,47 +108,47 @@ namespace IBM.Interview.ProjectA
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040000
-			public const int MvvmCrossTagId = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int MvvmCrossTagId = 2131034112;
 			
-			// aapt resource value: 0x7f040001
-			public const int MvxBindingTagUnique = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int MvxBindingTagUnique = 2131034113;
 			
-			// aapt resource value: 0x7f040002
-			public const int any = 2130968578;
+			// aapt resource value: 0x7f050002
+			public const int any = 2131034114;
 			
-			// aapt resource value: 0x7f040003
-			public const int back = 2130968579;
+			// aapt resource value: 0x7f050003
+			public const int back = 2131034115;
 			
-			// aapt resource value: 0x7f040007
-			public const int buttonLayout = 2130968583;
+			// aapt resource value: 0x7f050007
+			public const int buttonLayout = 2131034119;
 			
-			// aapt resource value: 0x7f040006
-			public const int cameraSurfaceView = 2130968582;
+			// aapt resource value: 0x7f050006
+			public const int cameraSurfaceView = 2131034118;
 			
-			// aapt resource value: 0x7f04000a
-			public const int check = 2130968586;
+			// aapt resource value: 0x7f05000a
+			public const int check = 2131034122;
 			
-			// aapt resource value: 0x7f040005
-			public const int finderToolbar = 2130968581;
+			// aapt resource value: 0x7f050005
+			public const int finderToolbar = 2131034117;
 			
-			// aapt resource value: 0x7f040004
-			public const int front = 2130968580;
+			// aapt resource value: 0x7f050004
+			public const int front = 2131034116;
 			
-			// aapt resource value: 0x7f040008
-			public const int picFromCamera = 2130968584;
+			// aapt resource value: 0x7f050008
+			public const int picFromCamera = 2131034120;
 			
-			// aapt resource value: 0x7f040009
-			public const int picFromGallery = 2130968585;
+			// aapt resource value: 0x7f050009
+			public const int picFromGallery = 2131034121;
 			
-			// aapt resource value: 0x7f04000b
-			public const int textView1 = 2130968587;
+			// aapt resource value: 0x7f05000b
+			public const int textView1 = 2131034123;
 			
-			// aapt resource value: 0x7f04000c
-			public const int textView2 = 2130968588;
+			// aapt resource value: 0x7f05000c
+			public const int textView2 = 2131034124;
 			
-			// aapt resource value: 0x7f04000d
-			public const int textView3 = 2130968589;
+			// aapt resource value: 0x7f05000d
+			public const int textView3 = 2131034125;
 			
 			static Id()
 			{
@@ -179,14 +179,30 @@ namespace IBM.Interview.ProjectA
 			}
 		}
 		
+		public partial class Raw
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int haarcascade_frontalcatface = 2130968576;
+			
+			static Raw()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Raw()
+			{
+			}
+		}
+		
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f050001
-			public const int ApplicationName = 2131034113;
+			// aapt resource value: 0x7f060001
+			public const int ApplicationName = 2131099649;
 			
-			// aapt resource value: 0x7f050000
-			public const int Hello = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int Hello = 2131099648;
 			
 			static String()
 			{
@@ -201,8 +217,8 @@ namespace IBM.Interview.ProjectA
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f060000
-			public const int App = 2131099648;
+			// aapt resource value: 0x7f070000
+			public const int App = 2131165184;
 			
 			static Style()
 			{
