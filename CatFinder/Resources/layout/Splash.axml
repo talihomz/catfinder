@@ -6,7 +6,7 @@
     android:padding="25dp"
     android:background="@android:color/black">
     <TextView
-        android:text="Recyclable Item Finder "
+        android:text="Cat Face Finder "
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1"

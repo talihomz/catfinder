@@ -25,7 +25,7 @@ namespace CatFinder.Util
                     {
                         Log.Info(LoggerMessage, "OpenCV loaded successfully");
 
-                        // ConfigureDetector();
+                        ConfigureDetector();
 
                         // ConfigureCamera
                         ConfiureCamera();

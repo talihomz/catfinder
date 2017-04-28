@@ -1,24 +1,31 @@
 ﻿using Android.App;
+using Android.Content.PM;
 using Android.OS;
 using Android.Util;
 using Android.Views;
 using Catfinder.Core.ViewModels;
 using CatFinder.Util;
 using Java.IO;
+using Java.Lang;
 using MvvmCross.Droid.Views;
 using OpenCV.Android;
 using OpenCV.Core;
+using OpenCV.ImgProc;
 using OpenCV.ObjDetect;
 
 namespace CatFinder.Activities
 {
-    [Activity(Label = "Finder", Theme = "@style/App")]
+    [Activity(Label = "Cat Finder", Theme = "@style/App",
+        ScreenOrientation = ScreenOrientation.Landscape,
+        ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.KeyboardHidden)]
     public class FinderActivity : MvxActivity<FinderViewModel>, CameraBridgeViewBase.ICvCameraViewListener2
     {
         private CameraBridgeViewBase _openCvCamera;
         private LibLoaderCallback _loaderCallback;
         private Mat _mRgba, _mGray;
-        private int _mAbsoluteFaceSize;
+        private static readonly Scalar FaceRectColor = new Scalar(0, 255, 0, 255);
+        private float _mRelativeFaceSize = 0.2f;
+        private int _mAbsoluteFaceSize = 0;
         private const string ActivityLogger = "FinderActivity";
 
         public File CascadeFile { get; set; }
@@ -83,11 +90,13 @@ namespace CatFinder.Activities
         public void OnCameraViewStarted(int p0, int p1)
         {
             // initialise 
+            _mGray = new Mat();
             _mRgba = new Mat();
         }
 
         public void OnCameraViewStopped()
         {
+            _mGray.Release();
             _mRgba.Release();
         }
 
@@ -96,14 +105,23 @@ namespace CatFinder.Activities
             _mRgba = inputFrame.Rgba();
             _mGray = inputFrame.Gray();
 
+            if (_mAbsoluteFaceSize == 0)
+            {
+                var height = _mGray.Rows();
+                if (Math.Round(height * _mRelativeFaceSize) > 0)
+                {
+                    _mAbsoluteFaceSize = Math.Round(height * _mRelativeFaceSize);
+                }
+            }
+
             var faces = new MatOfRect();
 
             Detector?.DetectMultiScale(_mGray, faces, 1.1, 2, 2, new OpenCV.Core.Size(_mAbsoluteFaceSize, _mAbsoluteFaceSize), new OpenCV.Core.Size());
 
             // draw faces
-            //var facesArray = faces.ToArray();
-            //foreach (Rect t in facesArray)
-            //    Imgproc.Rectangle(_mRgba, t.Tl(), t.Br(), FaceRectColor, 3);
+            var facesArray = faces.ToArray();
+            foreach (var t in facesArray)
+                Imgproc.Rectangle(_mRgba, t.Tl(), t.Br(), FaceRectColor, 3);
 
             return _mRgba;
         }
