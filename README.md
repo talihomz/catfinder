@@ -1,7 +1,7 @@
-IBM Project A Solution
-=====================
+CatFinder
+=========
 
-This is a native android app for users to discover whether a product is recyclable. Written in C#.
+This is a native android app that finds cats using OpenCV. Written in C#.
 
 ## Dependencies
 
