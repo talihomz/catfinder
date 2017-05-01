@@ -5,7 +5,7 @@ using MvvmCross.Droid.Views;
 namespace CatFinder
 {
     [Activity(
-        Label = "Recyclable Finder"
+        Label = "Cat Finder"
         , Theme = "@style/App"
         , MainLauncher = true
         , NoHistory = true

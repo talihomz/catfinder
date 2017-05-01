@@ -56,12 +56,12 @@ namespace CatFinder.Util
                 {
                     cascadeDir = _activity.GetDir("cascade", FileCreationMode.Private);
                     _activity.CascadeFile = new File(cascadeDir, "haarcascade_frontalcatface.xml");
-                    using (var os = new FileOutputStream(_activity.CascadeFile))
+                    using (var outputFileStream = new FileOutputStream(_activity.CascadeFile))
                     {
                         int byteRead;
                         while ((byteRead = inputFileStream.ReadByte()) != -1)
                         {
-                            os.Write(byteRead);
+                            outputFileStream.Write(byteRead);
                         }
                     }
                 }
@@ -72,14 +72,19 @@ namespace CatFinder.Util
                 {
                     Log.Error(LoggerMessage, "Failed to load cascade classifier");
                     _activity.Detector = null;
+
+                    // update that a detector was loaded
+                    _activity.ViewModel.DetectorStatus = "Cat eyes not working :-(";
                 }
                 else
+                {
                     Log.Info(LoggerMessage, "Loaded cascade classifier from " + _activity.CascadeFile.AbsolutePath);
 
-                cascadeDir.Delete();
+                    // update that a detector was loaded
+                    _activity.ViewModel.DetectorStatus = "Looking for cats <O.O>";
+                }
 
-                // update that a detector was loaded
-                _activity.ViewModel.DetectorStatus = "Looking for cats <O.O>";
+                cascadeDir.Delete();
             }
             catch (IOException e)
             {
